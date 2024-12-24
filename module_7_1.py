@@ -16,14 +16,17 @@ class Shop():
 
     __file_name = "products.txt"
 
-    def get_products(self, __file_name):
+    def get_products(self):
         file = open(self.__file_name, 'r')
-        file.read()
+        inf = file.read()
+        print(inf)
         file.close()
+        return inf
+
 
 
 s1 = Shop()
 p1 = Product('Potato', 50.0, 'Vagetables')
 p2 = Product('Spaghetti', 3.4, 'Groceries')
 p3 = Product('Potato', 5.5, 'Vegetables')
-print(p1)
+s1.get_products()
